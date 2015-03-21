@@ -1,5 +1,5 @@
 import unittest
-from trie import TrieNode
+from trie import Trie
 
 
 class TrieTest(unittest.TestCase):
@@ -15,7 +15,7 @@ class TrieTest(unittest.TestCase):
 ---l
 ----l
 --o"""
-        self.trob = TrieNode()
+        self.trob = Trie()
         for key in self.keys[0:2]:
             self.trob.insert(key)
 

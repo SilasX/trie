@@ -1,4 +1,4 @@
-class TrieNode(object):
+class Trie(object):
 
     def __init__(self):
         # next is a dict mapping characters to the nodes that contain
@@ -61,11 +61,11 @@ h
             self.nexts[word[0]].insert(word[1:])
         # char not in dict, so make subtrie and descend
         else:
-            self.nexts[word[0]] = TrieNode()
+            self.nexts[word[0]] = Trie()
             self.nexts[word[0]].insert(word[1:])
 
 if __name__ == "__main__":
-    zog = TrieNode()
+    zog = Trie()
     to_insert = [
         #"hi",
         "ho",
