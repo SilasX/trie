@@ -5,18 +5,6 @@ class Trie(object):
         # that subtrie
         self.nexts = {}
 
-    def pprint(self, inchar="", depth=0):
-        """pretty-print the tree node: show input node (passed from
-previous), and then, one character over, the subtrie of every character in
-the .nexts dict
-        """
-        print "{lead}{char}".format(
-            lead=depth*"-",
-            char=inchar,
-        )
-        for key, val in self.nexts.iteritems():
-            val.pprint(key, depth + 1)
-
     def as_string(self, inchar="", depth=0):
         """return pretty string representing the trie: show char for a node
 and then, one character over, the subtrie of every character in the .nexts
